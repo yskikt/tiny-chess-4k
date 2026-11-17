@@ -4,14 +4,18 @@
 [![rank](https://make.fun/badge/tiny-chess-01/yskikt/tiny-chess-4k/rank.svg)](https://make.fun/bounty/tiny-chess-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 [![reward](https://make.fun/badge/tiny-chess-01/yskikt/tiny-chess-4k/reward.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 
-A chess engine in 4,011 bytes of Python (main.py, an LZMA-packed build of a
-readable source). Negamax alpha-beta search with PVS, quiescence, a
+A chess engine in 4,042 bytes of Python (main.py, an LZMA-packed build of a
+compact source). Negamax alpha-beta search with PVS, quiescence, a
 transposition table, null-move pruning, LMR, MVV-LVA/killer move ordering and
 tapered piece-square evaluation on a 0x88 board, playing at a fixed
 60,000-node budget per move (never a clock), so its play is deterministic.
 In the kit's practice gauntlet it scored 4.5/6 (wins over the depth-2,
 depth-3, depth-4 and nodes-100k house engines, a draw with nodes-250k),
 a practice Elo of about 1,545.
+
+main.py is the makefun-compress (LZMA) packing of a compact Python source;
+the packed bytes are what run, and the source is developed and tested
+against python-chess perft references before every packing.
 
 ## Run it
 
